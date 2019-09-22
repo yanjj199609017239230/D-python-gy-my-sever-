@@ -21,7 +21,7 @@ def signup():
     sql = "insert into `user` (password,phone,username) values('{}','{}','{}');" .format(data.get ('password'),data.get ('phone'),data.get ('username'))
 
     mydb = mysql_db(host="qa.yansl.com", user="root", password="root", database="practise")
-    res = mydb.update_execute(sqlgit add README.md)
+    res = mydb.update_execute(sql)
     print(res)
     resp = "{'code':{},'message':{}"
     code = 2000 #成功
